@@ -1,0 +1,67 @@
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/3/a/Register.hdl
+/**
+ * 16-bit register:
+ * If load is asserted, the register's value is set to in;
+ * Otherwise, the register maintains its current value:
+ * if (load(t)) out(t+1) = int(t), else out(t+1) = out(t)
+ */
+CHIP Register {
+    IN in[16], load;
+    OUT out[16];
+
+    PARTS:
+    Mux(a=out0 , b=in[0] , sel=load , out=mout0 );
+    DFF(in=mout0 , out=out0, out=out[0] );
+
+    Mux(a=out1 , b=in[1] , sel=load , out=mout1 );
+    DFF(in=mout1 , out=out1, out=out[1] );
+    
+    Mux(a=out2 , b=in[2] , sel=load , out=mout2 );
+    DFF(in=mout2 , out=out2, out=out[2] );
+    
+    Mux(a=out3 , b=in[3] , sel=load , out=mout3 );
+    DFF(in=mout3 , out=out3, out=out[3] );
+    
+    Mux(a=out4 , b=in[4] , sel=load , out=mout4 );
+    DFF(in=mout4 , out=out4, out=out[4] );
+    
+    Mux(a=out5 , b=in[5] , sel=load , out=mout5 );
+    DFF(in=mout5 , out=out5, out=out[5] );
+    
+    Mux(a=out6 , b=in[6] , sel=load , out=mout6 );
+    DFF(in=mout6 , out=out6, out=out[6] );
+    
+    Mux(a=out7 , b=in[7] , sel=load , out=mout7 );
+    DFF(in=mout7 , out=out7, out=out[7] );
+    
+    Mux(a=out8 , b=in[8] , sel=load , out=mout8 );
+    DFF(in=mout8 , out=out8, out=out[8] );
+    
+    Mux(a=out9 , b=in[9] , sel=load , out=mout9 );
+    DFF(in=mout9 , out=out9, out=out[9] );
+    
+    Mux(a=out10 , b=in[10] , sel=load , out=mout10 );
+    DFF(in=mout10 , out=out10, out=out[10] );
+    
+    Mux(a=out11 , b=in[11] , sel=load , out=mout11 );
+    DFF(in=mout11 , out=out11, out=out[11] );
+    
+    Mux(a=out12 , b=in[12] , sel=load , out=mout12 );
+    DFF(in=mout12 , out=out12, out=out[12] );
+    
+    Mux(a=out13 , b=in[13] , sel=load , out=mout13 );
+    DFF(in=mout13 , out=out13, out=out[13] );
+    
+    Mux(a=out14 , b=in[14] , sel=load , out=mout14 );
+    DFF(in=mout14 , out=out14, out=out[14] );
+   
+    Mux(a=out15 , b=in[15] , sel=load , out=mout15 ); 
+    DFF(in=mout15 , out=out15, out=out[15] );
+
+    
+    
+    //// Replace this comment with your code.
+}
