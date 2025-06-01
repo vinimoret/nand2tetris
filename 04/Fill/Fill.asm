@@ -28,7 +28,7 @@
     (FILL_SCREEN)
         @i
         D=M
-        @END
+        @LOOP
         D;JEQ
 
         @j
@@ -49,7 +49,7 @@
     (CLEAN_SCREEN)
         @i
         D=M
-        @END
+        @LOOP
         D;JEQ
 
         @j
@@ -65,10 +65,4 @@
         M=M+1
         @CLEAN_SCREEN
         0;JMP
-
-    (END)
-    @LOOP
-    0;JMP
-@LOOP
-0;JMP
 
