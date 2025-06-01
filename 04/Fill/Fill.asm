@@ -19,7 +19,7 @@
     @j
     M=0
 
-    @24576
+    @KBD
     D=M
     
     @CLEAN_SCREEN
